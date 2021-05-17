@@ -1,0 +1,65 @@
+/* pages/select/select.wxss */
+page{
+  width: 100%;
+}
+
+#top{
+  margin-top: 20rpx;
+  text-align: right;
+  font-size: 30rpx;
+}
+
+.title{
+  margin-top: 30rpx;
+  text-align: center;
+  font-size: 50rpx;
+}
+
+.wrap{
+  /* width: 100%; */
+  padding: 40rpx;
+}
+
+.wrap::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.user{
+  height: 140rxp;
+  width: 120rpx;
+  margin: 20rpx;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+
+.avatar{
+  height: 100rpx;
+  width: 100rpx;
+}
+
+.select{
+  height: 80rpx;
+  width: 80rpx;
+  position: absolute;
+  top: 16rpx;
+  left: 22rpx;
+}
+
+.del_icon{
+  height: 40rpx;
+  width: 40rpx;
+  position: absolute;
+  top: -20rpx;
+  right: -10rpx;
+}
+
+.user text{
+  font-size: 28rpx;
+}
+
+#N5{
+  font-size: 22rpx;
+}

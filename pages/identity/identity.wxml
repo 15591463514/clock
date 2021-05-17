@@ -1,0 +1,37 @@
+<!-- 
+  表单内容:
+    姓名：xxx，（text类型input，要求：为2~5个汉字，符合名字的正则） 
+    性别：男，（可选框："男","女"）
+    年龄：30，（number类型input，要求：范围3~99）
+    头像：（点击上传头像）【文件上传功能】
+ -->
+
+ 
+ <form action="reg" bindsubmit="handlerSubmit">
+
+  <view class="avatar">
+      <view wx:if="{{!hasAvatar}}" bindtap="upload">上传头像</view>
+      <image wx:if="{{hasAvatar}}" bindtap="upload" src="{{avatar}}"></image>
+  </view>
+
+  <view>
+    <text>姓名：</text>
+    <input type="text" name="UserName" maxlength="5"></input>
+  </view>
+
+  <view>
+    <text>性别：</text>
+      <picker class="picker_id" name="Identity" bindchange="bindPickerChange" value="{{idIndex}}" range="{{idList}}">
+        {{idList[idIndex]}}
+        <image class="pull" src="../../img/pull.png"></image>
+      </picker>
+  </view>
+  
+  <view>
+    <text>年龄：</text>
+    <input type="number" name="age" maxlength="2"></input>
+  </view>
+
+  <button class="submit" disabled="{{disabled}}" form-type="submit">提 交</button>
+
+ </form>

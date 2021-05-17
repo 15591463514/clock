@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/main/main",
+    "pages/select/select",
+    "pages/identity/identity",
+    "pages/main_1/main_1",
+    "pages/usersdata/usersdata",
+    "pages/mine/mine",
+    "pages/home/home",
+    "pages/data_view/data_view"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f3f3f8",
+    "navigationBarTitleText": "微计时",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#f3f3f8",
+    "selectedColor": "#5c95ef",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "计时",
+        "iconPath": "./img/clock.png",
+        "selectedIconPath": "./img/_clock.png"
+      },
+      {
+        "pagePath": "pages/data_view/data_view",
+        "text": "数据",
+        "iconPath": "./img/data.png",
+        "selectedIconPath": "./img/_data.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./img/mine.png",
+        "selectedIconPath": "./img/_mine.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "debug": true
+}

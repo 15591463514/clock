@@ -1,0 +1,22 @@
+<!-- 我的 -->
+<view class="{{theme}} page">
+
+  <view class="user_info ">
+    <image class="user_img" src="{{userInfo.avatarUrl}}"></image>
+    <view class="user_text">
+      <text class="user_name">{{userInfo.nickName}}</text>
+      <text class="user_num">123****8910</text>
+    </view>
+    <view bindtap="set" decode="true" class="iconfont iconshezhi"></view>
+  </view>
+
+  <view class="wrapper ">
+    <view class="one styleBox1" bindtap="one">个人信息</view>
+    <view class="two styleBox1">成员管理</view>
+    <view class="three styleBox1">xxxx</view>
+    <view class="four styleBox1">xxxx</view>
+    <view class="five styleBox1">xxxx</view>
+    <view class="six styleBox1">设置</view>
+  </view>
+
+</view>

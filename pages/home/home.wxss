@@ -1,0 +1,22 @@
+/* pages/home/home.wxss */
+.container {
+  height: 200rpx;
+  line-height: 200rpx;
+  font-size: 50rpx;
+}
+
+button {
+  width: 150rpx;
+  background: rgb(7, 193, 96);
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title view {
+  margin: 20rpx;
+}

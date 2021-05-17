@@ -1,0 +1,59 @@
+<!-- 记录时间 -->
+<!-- 同学1~4的时间：利用数组渲染 -->
+<!-- <view wx:for="{{Array}}" wx:for-item="it" wx:for-index="idx" wx:key="Array">
+  用户：{{idx+1}}
+  <view>{{it.userTime}}</view>
+</view> -->
+
+<!-- <view>
+  重新选择
+</view> -->
+<view class="countDown">
+  <view class="cl">
+    <text wx:if="{{countdown<0}}">{{-countLeft}}</text>
+    <text wx:if="{{countdown>=0}}">00</text>
+  </view>
+  <view class="cm">.</view>
+  <view class="cr">
+    <text wx:if="{{countdown<0}}">{{countRight}}</text>
+    <text wx:if="{{countdown>=0}}">00</text>
+  </view>
+</view>
+
+
+
+
+<!-- <view wx:for="{{arr}}" wx:for-item="item" wx:for-index="index" wx:key="arr">
+  用户{{item.num}}:{{item.userTime}}ms
+</view> -->
+
+<!-- 有一个按钮：开始，同时发出声音， -->
+
+<!-- 同时开始计时，等待输入 -->
+<view class="btns">
+  <button bindtap="start" plain="true" size="mini" type="primary" disabled="{{disabled}}"
+    style="position: relative; left: -2rpx; top: 0rpx">开始</button>
+  <button bindtap="save" plain="true" size="mini" type="primary" disabled="{{!disabled || countDown>=0}}">保存</button>
+  <button bindtap="reset" plain="true" size="mini" type="warn" disabled="{{disReset}}">重置</button>
+  <button bindtap="clear" plain="true" size="mini" type="warn" disabled="{{disEmpty}}">清空</button>
+</view>
+<input bindinput="input" bindblur="blur" type="text" password="true" focus="{{focus}}" class="input"
+  disabled="{{disInput}}" value="{{value}}"></input>
+<!-- 10秒之后，发出声音 -->
+<!-- <text wx:if="{{countDown>0}}">{{countDown}}秒后开始</text> -->
+
+<view class="User" wx:for="{{Users}}" wx:for-index="userIndex" wx:for-item="userItem" wx:key="user">
+
+  <view class="UserInfo">
+    <view class="Number">{{userIndex + 1}}</view>
+    <image src="{{userItem.fileID}}"></image>
+    <view class="Name {{'N'+userItem.UserName.length}}">{{userItem.UserName}}</view>
+  </view>
+
+  <view class="Time">
+    <view class="{{timeOne}}">{{userItem.one}}</view>
+    <view class="{{timeTwo}}">{{userItem.two}}</view>
+    <view class="{{timeThree}}">{{userItem.three}}</view>
+  </view>
+
+</view>

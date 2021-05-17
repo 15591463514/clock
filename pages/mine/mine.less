@@ -1,0 +1,77 @@
+
+
+// 用户信息
+.user_info {
+  display: flex;
+  margin: 0px 4% 40rpx;
+  padding-top: 40rpx;
+  position: relative;
+  // 头像
+  .user_img {
+    height: 160rpx;
+    width: 160rpx;
+    border-radius: 16rpx;
+  }
+  .user_text {
+    height: 100%;
+    line-height: 40rpx;
+    padding: 30rpx;
+    .user_name {
+      display: block;
+      font-weight: bold;
+    }
+
+    .user_num {
+      display: block;
+    }
+  }
+
+  .iconshezhi {
+    position: absolute;
+    right: 0rpx;
+    height: 44rpx;
+    width: 44rpx;
+    line-height: 160rpx;
+  }
+}
+
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 0rpx 4%;
+  view{
+    border-radius: 14rpx;
+    background-color: #ffffff;
+    box-shadow: 0 0 4rpx rgb(216, 216, 216);
+    text-align: center;
+    line-height: 100rpx;
+  }
+}
+.one {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+.two {
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+.three {
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+.four {
+  grid-column: 2 / 3;
+  grid-row: 2;
+}
+.five {
+  grid-column: 1 / 2;
+  grid-row: 3;
+}
+.six {
+  grid-column: 2 / 3;
+  grid-row: 3;
+}

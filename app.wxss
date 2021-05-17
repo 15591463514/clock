@@ -1,0 +1,22 @@
+/**app.wxss**/
+
+@import './ttf/ledfont.wxss';
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+
+page{
+  /* background-color: hsl(220, 8%, 7%);  */
+  background-color: #f3f3f8; 
+  color: #3b3b3b;
+  font-size: 34rpx;
+}
+

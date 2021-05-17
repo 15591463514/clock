@@ -1,0 +1,142 @@
+/* pages/main_1/main_1.wxss */
+page {
+  background-color: hsl(220, 8%, 7%);
+  color: #B0B1B6;
+  font-size: 34rpx;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* 输入框 */
+.input {
+  color: white;
+  height: 40rpx;
+  width: 100%;
+  margin-left: -100rpx;
+}
+
+/* 一条横框 */
+.User {
+  display: flex;
+  flex-direction: row;
+  height: 110rpx;
+  width: 94%;
+  /* background-color: #282A33; */
+  margin: 1px;
+  line-height: 110rpx;
+  margin: 10rpx auto;
+  /* border-radius: 16rpx; */
+}
+
+.UserInfo {
+  display: flex;
+  flex-direction: row;
+  background-color: #282A33;
+  width: 40%;
+  border-radius: 10rpx 0 0 10rpx;
+}
+
+/* 编号 */
+.Number {
+  margin: 0 14rpx;
+  font-size: 26rpx;
+}
+
+/* 图像 */
+.User .UserInfo image {
+  width: 90rpx;
+  height: 90rpx;
+  margin: 10rpx 0;
+  border-radius: 10rpx;
+}
+
+/* 名字 */
+.Name {
+  width: 120rpx;
+  height: 110rpx;
+  text-align: center;
+  font-size: 32 rpx;
+}
+
+/* 三次时间 */
+.Time {
+  display: flex;
+  flex-direction: row;
+  margin-left: -4rpx;
+  font-size: 44rpx;
+  font-family: LEDFont;
+  width: 60%;
+}
+
+/* 每个时间 */
+.Time view {
+  height: 100%;
+  width: 32%;
+  text-align: center;
+  margin: 0 4rpx;
+  background-color: #282A33;
+  border-radius: 10rpx;
+}
+
+.Time view:first-child {
+  border-radius: 0 10rpx 10rpx 0;
+}
+
+
+/* 竖实线 */
+/* .time view:nth-child(2){
+  border-left: 3px solid #101113;
+  border-right: 3px solid #101113;
+} */
+
+/* 浅色时间 */
+.timeOne,
+.timeTwo,
+.timeThree {
+  background-color: #353742 !important;
+}
+
+/* 名字长度大于3的，字体缩小 */
+.N4 {
+  font-size: 28rpx;
+}
+
+.N5,
+.N6 {
+  font-size: 22rpx;
+}
+
+.countDown {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 300rpx;
+  font-size: 180rpx;
+  /* text-align: center; */
+  line-height: 300rpx;
+  font-family: LEDFont;
+}
+
+.countDown .cm {
+  width: 6%;
+  text-align: center;
+}
+
+.countDown .cl {
+  width: 47%;
+  text-align: right;
+}
+
+.countDown .cr{
+  width: 47%;
+}
+
+
+
+
+
+

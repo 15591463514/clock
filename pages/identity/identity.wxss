@@ -1,0 +1,65 @@
+/* pages/identity/identity.wxss */
+
+
+form view{
+  height: 80rpx;
+  width: 80%;
+  margin: 50rpx auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+input{
+  border: 1px #B0B1B6 solid;
+  border-radius: 6rpx;
+  height: 70rpx;
+  width: 60%;
+  padding-left: 40rpx;
+  font-size: 36rpx;
+}
+
+form view text{
+  font-size: 36rpx;
+  display: block;
+  width: 150rpx;
+}
+
+.submit{
+  background-color: #52c997;
+  color: white;
+}
+
+.picker_id{
+  width: 67%;
+  height: 70rpx;
+  border: 1px solid #B0B1B6;
+  border-radius: 6rpx;
+  padding-left: 40rpx;
+  font-size: 34rpx;
+  line-height: 70rpx;
+  box-sizing: border-box;
+}
+
+.pull{
+  height: 70rpx;
+  width: 70rpx;
+  float: right;
+}
+
+.avatar{
+  height: 400rpx;
+  width: 400rpx;
+}
+
+.avatar view{
+  text-align: center;
+  display: inline-block;
+}
+
+.avatar image{
+  height: 200rpx;
+  width: 200rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+}

@@ -1,0 +1,6 @@
+<view>开始时间：{{t0}}</view>
+<view>结束时间：{{t1}}</view>
+<view>用时：{{t}}</view>
+<view>点击下方空白区域后，按下按钮开始计时</view>
+<view class="remake" bindtap="remake" >重置</view>
+<textarea type="number" auto-focus="true" class="keyInput" password="true" focus="true" maxlength="-1" bindinput="input" value=""></textarea>

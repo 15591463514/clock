@@ -1,0 +1,27 @@
+<!-- 添加，删出成员 -->
+<view id="top">
+  <text bindtap="look" decode="{{true}}">查看&nbsp;&nbsp;&nbsp;</text>
+  <text bindtap="add" decode="{{true}}">添加&nbsp;&nbsp;&nbsp;</text>
+  <text bindtap="del" decode="{{true}}" wx:if="{{!isDel}}">删除&nbsp;&nbsp;&nbsp;</text>
+  <text bindtap="del" decode="{{true}}" wx:if="{{isDel}}">返回&nbsp;&nbsp;&nbsp;</text>
+
+</view>
+
+<!-- 选择成员 -->
+<view class="title">请选择成员：</view>
+
+<!-- 成员列表 -->
+<view class="wrap">
+  
+  <!-- 循环渲染 -->
+  <view class="user" wx:for="{{Users}}" wx:for-item="item" wx:for-index="index" wx:key="Users">
+    <image class="avatar" bindtap="pitchOn" data-index="{{index}}" src="{{item.fileID}}"></image>
+    <image class="select" bindtap="unselect" wx:if="{{status[index]}}" data-index="{{index}}" data-idCard="{{item.idCard}}" src="../../img/select.png" ></image>
+    <image class="del_icon" wx:if="{{}}" src="../../img/del.png" bindtap="del_icon" data-index="{{index}}" data-idCard="{{item.idCard}}" wx:if="{{isDel}}"></image>
+    <text id="{{'N' + item.UserName.length}}">{{item.UserName}}</text>
+  </view>
+  
+</view>
+
+<!-- 按钮 -->
+<button plain="true" bindtap="enter" type="primary" disabled="{{isDel}}">确认</button>
