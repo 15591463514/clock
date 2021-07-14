@@ -1,12 +1,88 @@
+<view class="side-menu {{menu_style}}">
+
+  <view class="side-menu-inner" bindtap="yunjishi">
+    <view>
+      <image src="../../img/yunjishi.png"></image>
+      <text>微计时</text>
+    </view>
+    <text>></text>
+  </view>
+
+  <view class="side-menu-inner" bindtap="duoren" >
+    <view>
+      <image src="../../img/duoren.png"></image>
+      <text>云计时</text>
+    </view>
+    <text>></text>
+  </view>
+
+  <view class="side-menu-inner" bindtap="waishe">
+    <view>
+      <image src="../../img/waishe.png"></image>
+      <text>外设计时</text>
+    </view>
+    <text>></text>
+  </view>
+
+  <view class="side-menu-inner" bindtap="qiangda">
+    <view>
+      <image src="../../img/qiangda.png"></image>
+      <text>抢答器</text>
+    </view>
+    <text>></text>
+  </view>
+
+</view>
+
 <view class="title">
-  <view>icon</view>
-  <view>计时器</view>
-  <view>icon</view>
+  <view class="menu-btn {{menu_style}}" bindtap="menu">
+    <text class="menu-line"></text>
+    <text class="menu-line"></text>
+    <text class="menu-line"></text>
+  </view>
+  <view class="title-text">微计时</view>
+  <view class="upload" bindtap="upload">
+    <image src="../../img/upload.png"></image>
+  </view>
 </view>
 
 
-
-<view class="container"> {{timecount}}</view>
+<!-- <view class="container">{{timecount}}</view>
 <button bindtap='start' disabled="{{}}">开始</button>
 <button bindtap='stop'>暂停</button>
-<button bindtap='Reset'>停止</button>
+<button bindtap='Reset'>停止</button> -->
+
+
+<view class="jishi">
+  <view class="timebox">
+    <!-- 计时器 -->
+    <view class="container {{isTiming}}">
+      <view>{{timecount}}</view>
+    </view>
+    <!-- 中间记录部分 -->
+    <view class="{{center}} {{isTiming}}">
+      <view class="content">
+        <view wx:for="{{arr}}" wx:for-index="index" wx:for-item="item" wx:key="time">
+          <text>{{index+1}}</text><text>{{item.time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 按钮部分 -->
+  <view class="btns {{isTiming}}" >
+    <view class="begin" wx:if="{{in_1==1}}">
+      <view class="btn start" bindtap="start" disabled="{{}}" >开始</view>
+    </view>
+    <view class="other" wx:else="{{in_1}}">
+      <view>
+        <view class="btn stop" bindtap="stop" wx:if="{{in_2==1}}">暂停</view>
+        <view class="btn continue" bindtap="Continue" wx:else="{{in_2}}" id="Continue">继续</view>
+      </view>  
+      <view>
+        <view class="btn record" bindtap="record" wx:if="{{in_3==1}}">记录</view>
+        <view class="btn reset" bindtap="Reset" wx:else="{{in_3}}" id="Reset">重置</view>
+      </view>
+    </view>
+  </view>
+
+</view>

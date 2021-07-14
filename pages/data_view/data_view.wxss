@@ -1,10 +1,11 @@
-/**index.wxss**/
 ec-canvas {
   width: 100%;
   height: 100%;
 }
 
+
 .container {
+  margin-top: 100rpx;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -15,4 +16,384 @@ ec-canvas {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+}
+
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  height: 70rpx;
+  width: 100%;
+  background-color: #f3f3f8;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  z-index: 100;
+}
+
+.title>view {
+  padding: 20rpx;
+  text-decoration-line: underline;
+}
+
+.title view {
+  font-size: 40rpx;
+  line-height: 70rpx;
+}
+
+.title .title-text {
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  text-decoration-line: none;
+}
+
+.icon-down {
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon-down text {
+  transition: 0.5s;
+}
+
+.icon-down.fold>text:nth-child(1) {
+  height: 4rpx;
+  width: 26rpx;
+  border-radius: 10rpx;
+  background-color: #666666;
+  transform: rotate(45deg);
+}
+
+.icon-down.fold>text:nth-child(2) {
+  height: 4rpx;
+  width: 26rpx;
+  border-radius: 10rpx;
+  background-color: #666666;
+  transform: translate(-8rpx) rotate(-45deg);
+}
+
+.icon-down.unfold>text:nth-child(1) {
+  height: 4rpx;
+  width: 26rpx;
+  border-radius: 10rpx;
+  background-color: #666666;
+  transform: rotate(-45deg);
+}
+
+.icon-down.unfold>text:nth-child(2) {
+  height: 4rpx;
+  width: 26rpx;
+  border-radius: 10rpx;
+  background-color: #666666;
+  transform: translate(-8rpx) rotate(45deg);
+}
+
+
+.float {
+  width: 200rpx;
+  margin: 0 auto;
+  box-shadow: 7px 7px 13px #b9b9bc,
+    -7px -7px 13px #ffffff;
+  border-radius: 0 0 10rpx 10rpx;
+  margin-top: -20rpx;
+  transition: all 0.5s linear;
+
+}
+
+.float.fold {
+  margin-top: -300rpx;
+  box-shadow: none;
+}
+
+.float.unfold {
+  margin-top: 80rpx;
+}
+
+.unfold view {
+  height: 30rpx;
+}
+
+.float view {
+  position: relative;
+  width: 200rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-top: 1px solid rgb(235, 235, 235);
+  box-sizing: border-box;
+  transition: all 0.5s linear;
+}
+
+.float view:first-child {
+  border-top: none;
+}
+
+
+.Echarts.no {
+  display: none;
+}
+
+.Echarts.yes {
+  display: block;
+}
+
+
+.switch {
+  position: relative;
+  height: 80vh;
+  width: 80vw;
+  background-color: #2b4bff4b;
+  margin: 160rpx auto;
+  transition: 0.5s;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  box-shadow: 7px 7px 13px #b9b9bc,
+    -7px -7px 13px #ffffff;
+}
+
+.switch-title {
+  width: 100%;
+  text-align: center;
+  margin: 10rpx;
+  font-size: 36rpx;
+}
+
+.switch.close {
+  opacity: 0;
+  transform: scale(0.5,0.5);
+}
+
+.switch.open {
+  opacity: 1;
+  transform: scale(1,1);
+}
+
+.switch>.options {
+  width: 100%;
+}
+
+/* 成员选择 */
+.wrap {
+  width: 100%;
+  /* padding: 40rpx; */
+  display: flex;
+  flex-flow: wrap;
+}
+
+/* .wrap::after{
+  content: "";
+  display: block;
+  clear: both;
+} */
+
+.user {
+  height: 100rxp;
+  width: 80rpx;
+  margin: 10rpx;
+  position: relative;
+  text-align: center;
+}
+
+.user text{
+  transition: .3s;
+}
+
+.user text.isS {
+  color: red;
+  box-shadow: 10rpx 10rpx 10rpx gray;
+  background-color: #fff;
+  padding: 4rpx;
+  border-radius: 10rpx;
+}
+
+.user text.noS {
+  color: #3b3b3b;
+}
+
+.avatar {
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 100%;
+}
+
+.avatar.noS::after {
+  position: absolute;
+  top: 0;
+  left: 10rpx;
+  content: "";
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+  z-index: 1;
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 100%;
+}
+
+.avatar::after {
+  position: absolute;
+  top: 0;
+  left: 10rpx;
+  content: "";
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+  z-index: 1;
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 100%;
+}
+
+
+.avatar.isS::after {
+  position: absolute;
+  top: 0;
+  left: 10rpx;
+  content: "";
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  z-index: 1;
+  height: 60rpx;
+  width: 60rpx;
+}
+
+
+.user text {
+  font-size: 24rpx;
+}
+
+#N5 {
+  font-size: 20rpx;
+}
+
+.options {
+  margin: 20rpx 0;
+}
+
+.options>text {
+  margin: 30rpx;
+  font-size: 28rpx;
+}
+
+.comp view {
+  display: flex;
+}
+
+.confirm {
+  width: 120rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+  background-color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  position: absolute;
+  bottom: 20rpx;
+  left: 250rpx;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: inset 6px 6px 12px #bebebe,
+    inset -6px -6px 12px #ffffff;
+    
+}
+
+.json{
+  width: 100vw;
+  height: 80vh;
+  overflow: scroll;
+  padding: 10rpx;
+  background-color: #fcf9f8;
+  position: absolute;
+  top: -100vh;
+  right: -100vw;
+  transition: 0.5s;
+  opacity: 0;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  box-shadow: 7px 7px 13px #b9b9bc,
+    -7px -7px 13px #ffffff;
+}
+
+.json.showjson{
+  width: 94vw;
+  position: absolute;
+  background-color: #facbb9;
+  top: 100rpx;
+  right: 2vw;
+  opacity: 1;
+}
+
+.json-title{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.username{
+  font-size: 34rpx;
+  font-weight: 900;
+}
+
+
+/* 次数选择 */
+.seleDa text{
+  transition: .3s;
+}
+.seleDa text:nth-of-type(1).time3{
+  color: red;
+  box-shadow: 10rpx 10rpx 10rpx gray;
+  background-color: #fff;
+  padding: 4rpx;
+  border-radius: 10rpx;
+}
+
+.seleDa text:nth-of-type(2).time7{
+  color: red;
+  box-shadow: 10rpx 10rpx 10rpx gray;
+  background-color: #fff;
+  padding: 4rpx;
+  border-radius: 10rpx;
+}
+
+.seleDa text:nth-of-type(3).time15{
+  color: red;
+  box-shadow: 10rpx 10rpx 10rpx gray;
+  background-color: #fff;
+  padding: 4rpx;
+  border-radius: 10rpx;
+}
+
+/* 次数选择 */
+.comp text{
+  transition: .3s;
+}
+.comp text:nth-of-type(1).comp_jishiqi{
+  color: red;
+  box-shadow: 10rpx 10rpx 10rpx gray;
+  background-color: #fff;
+  padding: 4rpx;
+  border-radius: 10rpx;
+}
+
+.comp text:nth-of-type(2).comp_yunjishi{
+  color: red;
+  box-shadow: 10rpx 10rpx 10rpx gray;
+  background-color: #fff;
+  padding: 4rpx;
+  border-radius: 10rpx;
+}
+
+.comp text:nth-of-type(3).comp_waishejishi{
+  color: red;
+  box-shadow: 10rpx 10rpx 10rpx gray;
+  background-color: #fff;
+  padding: 4rpx;
+  border-radius: 10rpx;
 }

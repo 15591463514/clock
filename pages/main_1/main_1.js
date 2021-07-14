@@ -134,27 +134,6 @@ Page({
             a
           });
 
-          if (parseInt(countDown) > 0) {
-            // var warn =  parseInt(countDown) + "秒后开始";
-            // wx.showToast({
-            //   title: warn,
-            //   icon: 'none'
-            // })
-          } else {
-            // //获取十六进制随机数：
-            // var A = (Math.round(Math.random() * 15)).toString(16);
-            // var B = (Math.round(Math.random() * 15)).toString(16);
-            // var C = (Math.round(Math.random() * 15)).toString(16);
-            // var D = (Math.round(Math.random() * 15)).toString(16);
-            // var E = (Math.round(Math.random() * 15)).toString(16);
-            // var F = (Math.round(Math.random() * 15)).toString(16);
-            // var countColor = "#" + A + B + C + D + E + F;
-            // // console.log(countColor);
-            // this.setData({ countColor });
-          }
-
-
-
         }, 10);
       }
 
@@ -352,14 +331,12 @@ Page({
       for (var item of this.data.Users) {
         Users.where({
           idCard: item.idCard
-        })
-          .update({
-            data: {
+        }).update({
+          data: {
               log: _.push([{ date: Time, _data: _Time, spentTime: item.one }])
             }
           })
       }
-
     }
     if (this.data.current == 2) {
       this.setData({ timeTwo: "timeTwo" });

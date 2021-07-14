@@ -91,5 +91,13 @@ Page({
     this.setData({
       clock: value
     })
+  },
+  /**
+   * person
+   */
+  person: function(){
+    wx.navigateTo({
+      url: '../person/person',
+    })
   }
 })

@@ -12,7 +12,7 @@
 
   <view class="wrapper ">
     <view class="one styleBox1" bindtap="one">个人信息</view>
-    <view class="two styleBox1">成员管理</view>
+    <view class="two styleBox1" bindtap="person">成员管理</view>
     <view class="three styleBox1">xxxx</view>
     <view class="four styleBox1">xxxx</view>
     <view class="five styleBox1">xxxx</view>

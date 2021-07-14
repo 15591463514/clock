@@ -1,16 +1,11 @@
 /* pages/home/home.wxss */
-.container {
+.contain {
   height: 200rpx;
   line-height: 200rpx;
   font-size: 50rpx;
 }
 
-button {
-  width: 150rpx;
-  background: rgb(7, 193, 96);
-  color: #fff;
-  margin-bottom: 8px;
-}
+
 
 .title {
   display: flex;
@@ -19,4 +14,315 @@ button {
 
 .title view {
   margin: 20rpx;
+}
+
+.title .title-text {
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 40rpx;
+}
+
+.upload {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  background: #f3f3f8;
+  box-shadow: 7px 7px 13px #b9b9bc,
+    -7px -7px 13px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload>image {
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 菜单图标 */
+.menu-btn {
+  width: 70rpx;
+  height: 70rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border-radius: 50%;
+  background: #f3f3f8;
+  box-shadow: 7px 7px 13px #b9b9bc,
+    -7px -7px 13px #ffffff;
+}
+
+.menu-btn .menu-line {
+  width: 40rpx;
+  height: 4rpx;
+  background-color: #666;
+  margin: 5rpx 0;
+  border-radius: 5rpx;
+  transition: all 0.3s ease-in;
+}
+
+.menu-btn.closed {
+  background: linear-gradient(145deg, #ffffff, #dbdbdf);
+  box-shadow: 7px 7px 13px #b9b9bc,
+    -7px -7px 13px #ffffff;
+}
+
+.menu-btn.closed .menu-line:nth-child(1) {
+  transform: translateY(12rpx) rotate(45deg);
+}
+
+.menu-btn.closed .menu-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.closed .menu-line:nth-child(3) {
+  transform: translateY(-12rpx) rotate(-45deg);
+}
+
+/* 侧边栏 */
+.side-menu {
+  height: 100vh;
+  width: 300rpx;
+  background-color: #f3f3f8;
+  float: left;
+  margin-left: -300rpx;
+  transition: 0.5s;
+  /* border: 1px solid gray; */
+}
+
+.side-menu.closed {
+  margin-left: 0rpx;
+  box-shadow: rgb(190, 190, 190) 0 0 20rpx 6rpx;
+}
+
+.side-menu.menu {
+  margin-left: -300rpx;
+}
+
+.side-menu .side-menu-inner {
+  font-size: 30rpx;
+  padding: 40rpx 20rpx 40rpx 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.side-menu .side-menu-inner:first-child {
+  background-color: #cccccc;
+}
+
+.side-menu .side-menu-inner view {
+  align-items: center;
+  display: flex;
+}
+
+.side-menu .side-menu-inner image,
+text {
+  display: block;
+}
+
+.side-menu .side-menu-inner:nth-child(1)>view>image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+}
+
+.side-menu .side-menu-inner:nth-child(2)>view>image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 8rpx;
+}
+
+.side-menu .side-menu-inner:nth-child(3)>view>image {
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 16rpx;
+}
+
+.side-menu .side-menu-inner:nth-child(4)>view>image {
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 16rpx;
+}
+
+.side-menu .side-menu-inner view:nth-child(4)>image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+
+.side-menu .side-menu-inner>text {
+  font-size: 24rpx;
+  font-weight: 800;
+  color: #999;
+}
+
+
+.jishi {
+  height: 80vh;
+  /* position: relative; */
+}
+
+.jishi .timebox {
+  height: 80%;
+}
+
+.jishi .timebox .jishi .btns {
+  height: 20%;
+}
+
+
+/* 计时器 */
+.container {
+  height: 100%;
+  font-size: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s linear;
+  padding: 20rpx 0;
+}
+
+.container.isTiming {
+  height: 20%;
+}
+
+.container.noTiming {
+  height: 100%;
+}
+
+.container>view {
+  transition: all .5s linear;
+  height: 80rpx;
+}
+
+.container.isTiming view {
+  font-size: 80rpx;
+}
+
+.container view::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4rpx;
+  background-color: rgb(204, 204, 204);
+}
+
+.container.isTiming view::after {
+  opacity: 1;
+}
+
+.container.noTiming view::after {
+  opacity: 0;
+}
+
+
+.container.noTiming view {
+  font-size: 50rpx;
+}
+
+/* 
+.container_1 {
+  transition: all 1s linear;
+  padding-top: 200rpx;
+} */
+
+/* 中间记录部分 */
+.center {
+  height: 0rpx;
+  font-size: 44rpx;
+  overflow-y: scroll;
+  transition: all .3s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30rpx 0 30rpx;
+  box-sizing: border-box;
+}
+
+.center.isTiming {
+  height: 80%;
+}
+
+.center_1 {
+  height: 70%;
+  transition: all 1s linear;
+}
+
+.content {
+  transition: all 1s linear;
+  display: flex;
+  flex-direction: column-reverse;
+
+}
+.content>view>text{
+  display: inline-block;
+}
+.content>view>text:first-child{
+  width: 80rpx;
+  color: #999;
+  font-size: 34rpx;
+}
+
+/* 按钮 */
+.btns {
+  margin: 20rpx auto;
+  transition: all 5s linear;
+}
+
+.btn {
+  width: 150rpx;
+  height: 80rpx;
+  color: #fff;
+  margin-bottom: 8px;
+  margin: 0 auto;
+  border-radius: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  box-shadow: 7px 7px 13px #b9b9bc,
+  -7px -7px 13px #ffffff;
+}
+
+.btns>view {
+  width: 430rpx;
+  display: flex;
+  margin: 0 auto;
+}
+
+.other>view:first-child {
+  margin-right: 130rpx;
+}
+
+/* .other {
+  position: ;
+} */
+
+/* 设置各个按钮的颜色 */
+/* 开始 */
+.btn.start {
+  background-color: rgba(91, 91, 255, 0.808);
+}
+
+/* 暂停 */
+.btn.stop {
+  background-color: rgba(0, 0, 0, 0.685);
+}
+
+/* 记录 */
+.btn.record {
+  background-color: rgba(255, 166, 0, 0.658);
+}
+
+/* 因为使用wx：if，所以继续和重置需要id选择器 */
+/* 继续 */
+#Continue {
+  background-color: rgba(69, 236, 133, 0.74);
+}
+
+/* 重置 */
+#Reset {
+  background-color: rgba(153, 205, 50, 0.664);
 }

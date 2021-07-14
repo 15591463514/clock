@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -28,6 +29,18 @@
         {
           "name": "pages/main_1/main_1",
           "pathName": "pages/main_1/main_1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/usersdata/usersdata",
+          "pathName": "pages/usersdata/usersdata",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/data_view/data_view",
+          "pathName": "pages/data_view/data_view",
           "scene": null
         }
       ]

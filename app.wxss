@@ -18,5 +18,6 @@ page{
   background-color: #f3f3f8; 
   color: #3b3b3b;
   font-size: 34rpx;
+  font-family: "楷体";
 }
 

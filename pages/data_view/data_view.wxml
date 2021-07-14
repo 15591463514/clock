@@ -1,5 +1,82 @@
+<view class="title">
+  <view bindtap="menu">
+    选项
+  </view>
+  <view class="title-text" bindtap="showMenu">
+    <text>折线图</text>
+    <view class="icon-down {{showMenu}}">
+      <text></text>
+      <text></text>
+    </view>
+  </view>
+  <view bindtap="json">
+    json
+  </view>
+</view>
+
+<view class="float {{showMenu}}">
+  <view>柱状图</view>
+  <view>饼图</view>
+  <view>散点图</view>
+  <view>雷达图</view>
+</view>
+
+
+<!-- 选项卡 -->
+<view class="switch {{tab}}">
+  <view class="switch-title">选择你要查看的数据</view>
+  <view class="options">
+    选择成员
+
+    <!-- 成员列表 -->
+    <view class="wrap">
+      <!-- 循环渲染 -->
+      <view class="user" wx:for="{{Users}}" wx:for-item="item" wx:for-index="index" wx:key="Users">
+        <image class="avatar {{item.status}}" bindtap="pitchOn" data-index="{{index}}" src="{{item.fileID}}"></image>
+        <text id="{{'N' + item.UserName.length}}" class="{{item.status}}">{{item.UserName}}</text>
+      </view>
+    </view>
+
+  </view>
+  <view class="options comp">
+    <view>比较字段</view>
+    <text class="{{'comp_'+comp}}" bindtap="comp_jishiqi">计时器</text>
+    <text class="{{'comp_'+comp}}" bindtap="comp_yunjishi">云计时</text>
+    <text class="{{'comp_'+comp}}" bindtap="comp_waishejishi">外设计时</text>
+  </view>
+  <view class="options seleDa">
+    <view>查看数据记录</view>
+    <text class="{{'time'+recordTime}}" bindtap="time3">近3次</text>
+    <text class="{{'time'+recordTime}}" bindtap="time7">近7次</text>
+    <text  class="{{'time'+recordTime}}" bindtap="time15">近15次</text>
+  </view>
+
+  <view class="confirm" bindtap="confirm">确认</view>
+</view>
 
 <!--index.wxml-->
-<view class="container">
-  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+<view class="Echarts {{showchart}} ">
+  <view class="container">
+    <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+  </view>
+</view>
+
+<view class="json {{showjson}}">
+  <text class="json-title">Users</text>
+  <view wx:for="{{Users}}" wx:for-item="item" wx:for-index="index" wx:key="selectUsers">
+    <view>———————————————————————————————</view>
+    <view class="username">UserName:{{item.UserName}}</view>
+    <view>age:{{item.age}}</view>
+    <view>idCard:{{item.idCard}}</view>
+    <view>log:
+      <view wx:for="{{item.log}}" wx:for-item="its" wx:for-index="idx" wx:for-key="person">
+        <view>----------</view>
+        <view>{{idx}}</view>
+        <view>time:{{its._data}}</view>
+        <view>timestamp:{{its.date}}</view>
+        <view>data:{{its.spentTime}}</view>
+      </view>
+    </view>
+  </view>
+
 </view>

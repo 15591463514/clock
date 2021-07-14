@@ -1,0 +1,89 @@
+/* pages/select/select.wxss */
+page{
+  width: 100%;
+}
+
+#top{
+  margin-top: 20rpx;
+  text-align: right;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#top view{
+  width: 70rpx;
+  height: 70rpx;
+  display: block;
+  border-radius: 50%;
+  margin: 10rpx 20rpx 0rpx 20rpx;
+  background: #f3f3f8;
+  box-shadow: 7px 7px 13px #b9b9bc,
+    -7px -7px 13px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#top view image {
+  height: 40rpx;
+  width: 40rpx;
+  display: block;
+}
+
+.title{
+  margin-top: 30rpx;
+  text-align: center;
+  font-size: 50rpx;
+}
+
+.wrap{
+  /* width: 100%; */
+  padding: 40rpx;
+}
+
+.wrap::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.user{
+  height: 140rxp;
+  width: 120rpx;
+  margin: 20rpx;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+
+.avatar{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 100%;
+}
+
+.select{
+  height: 80rpx;
+  width: 80rpx;
+  position: absolute;
+  top: 16rpx;
+  left: 22rpx;
+}
+
+.del_icon{
+  height: 40rpx;
+  width: 40rpx;
+  position: absolute;
+  top: -20rpx;
+  right: -10rpx;
+}
+
+.user text{
+  font-size: 28rpx;
+}
+
+#N5{
+  font-size: 22rpx;
+}

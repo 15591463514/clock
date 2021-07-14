@@ -1,6 +1,9 @@
-
-<!-- 选择成员 -->
-<view class="title">请选择成员：</view>
+<!-- 添加，删出成员 -->
+<view id="top">
+  <view bindtap="add"><image src="../../img/addperson.png"></image></view>
+  <view bindtap="del" wx:if="{{!isDel}}"><image src="../../img/delperson.png"></image></view>
+  <view bindtap="del" wx:if="{{isDel}}"><image src="../../img/back.png"></image></view>
+</view>
 
 <!-- 成员列表 -->
 <view class="wrap">
@@ -15,5 +18,3 @@
   
 </view>
 
-<!-- 按钮 -->
-<button plain="true" bindtap="enter" type="primary" disabled="{{isDel}}">确认</button>

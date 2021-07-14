@@ -9,7 +9,8 @@
     "pages/usersdata/usersdata",
     "pages/mine/mine",
     "pages/home/home",
-    "pages/data_view/data_view"
+    "pages/data_view/data_view",
+    "pages/person/person"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -42,6 +43,5 @@
     ]
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json",
-  "debug": true
+  "sitemapLocation": "sitemap.json"
 }

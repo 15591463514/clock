@@ -1,7 +1,7 @@
 /* pages/main_1/main_1.wxss */
 page {
-  background-color: hsl(220, 8%, 7%);
-  color: #B0B1B6;
+  background-color: #f3f3f8;
+  color: #333333;
   font-size: 34rpx;
 }
 
@@ -35,9 +35,10 @@ page {
 .UserInfo {
   display: flex;
   flex-direction: row;
-  background-color: #282A33;
   width: 40%;
   border-radius: 10rpx 0 0 10rpx;
+  background-color: #ffffff;
+  box-shadow: 0 0 4rpx #d8d8d8;
 }
 
 /* 编号 */
@@ -78,7 +79,8 @@ page {
   width: 32%;
   text-align: center;
   margin: 0 4rpx;
-  background-color: #282A33;
+  background-color: #ffffff;
+  box-shadow: 0 0 4rpx #d8d8d8;
   border-radius: 10rpx;
 }
 
@@ -97,7 +99,7 @@ page {
 .timeOne,
 .timeTwo,
 .timeThree {
-  background-color: #353742 !important;
+  background-color: #f6f6f6 !important;
 }
 
 /* 名字长度大于3的，字体缩小 */
